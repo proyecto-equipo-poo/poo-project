@@ -151,6 +151,125 @@ public class Main {
         Proyecto académico de Programación Orientada a Objetos
     </p>
 
+    <!-- TEMA 2 -->
+
+    <section class="tema" id="tema2">
+
+        <h2>2. Composición y Modularización del Código</h2>
+
+        <p>
+            La composición es una técnica de Programación Orientada a Objetos
+            donde una clase contiene objetos de otras clases para construir
+            funcionalidades más complejas.
+        </p>
+
+        <p>
+            La modularización permite dividir el código en partes pequeñas,
+            organizadas y reutilizables, facilitando el mantenimiento
+            y escalabilidad del software.
+        </p>
+
+        <h3>¿Qué es la composición?</h3>
+
+        <p>
+            En composición, una clase utiliza otra clase como atributo.
+            Esto representa relaciones del tipo "tiene un".
+        </p>
+
+        <div class="card">
+
+            <h3>Ejemplo 1 - Composición</h3>
+
+            <pre><code>
+class Motor {
+
+    void encender() {
+        System.out.println("Motor encendido");
+    }
+}
+
+class Carro {
+
+    private Motor motor = new Motor();
+
+    void arrancar() {
+        motor.encender();
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Carro carro = new Carro();
+        carro.arrancar();
+    }
+}
+</code></pre>
+
+        </div>
+
+        <h3>¿Qué es la modularización?</h3>
+
+        <p>
+            La modularización organiza el código en diferentes clases
+            y métodos independientes para mejorar la claridad
+            y reutilización del sistema.
+        </p>
+
+        <div class="card">
+
+            <h3>Ejemplo 2 - Modularización</h3>
+
+            <pre><code>
+class Calculadora {
+
+    int sumar(int a, int b) {
+        return a + b;
+    }
+
+    int restar(int a, int b) {
+        return a - b;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Calculadora calc = new Calculadora();
+
+        System.out.println(calc.sumar(5, 3));
+        System.out.println(calc.restar(10, 4));
+    }
+}
+</code></pre>
+
+        </div>
+
+        <div class="ejercicios">
+
+            <h3>Ejercicios Propuestos</h3>
+
+            <ul>
+
+                <li>
+                    Crear una clase Computador que tenga una clase
+                    Procesador utilizando composición.
+                </li>
+
+                <li>
+                    Diseñar un sistema modular para una biblioteca
+                    utilizando clases separadas para Libro,
+                    Usuario y Prestamo.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
 </footer>
 
 <script src="js/script.js"></script>
