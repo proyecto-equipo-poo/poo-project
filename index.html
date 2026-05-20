@@ -2,49 +2,34 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>POO Project</title>
+    <title>POO JAVA</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header class="header">
 
-    <h2>POO Project</h2>
+    <h1>POO JAVA</h1>
 
     <nav class="navbar">
-
         <a href="#inicio">Inicio</a>
         <a href="#tema1">Tema 1</a>
         <a href="#tema2">Tema 2</a>
-
     </nav>
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="inicio">
 
-    <h1>
-        Programación Orientada a Objetos
-    </h1>
+    <h2>Programación Orientada a Objetos</h2>
 
     <p>
-        Manual web académico sobre los temas fundamentales de POO en Java.
+        Sitio académico sobre los temas fundamentales de POO en Java.
     </p>
-
-    <button>
-        Explorar Temas
-    </button>
 
 </section>
 
@@ -55,44 +40,22 @@
     <h2>1. Clases y Objetos</h2>
 
     <p>
-        Las clases y los objetos son pilares fundamentales de la
-        Programación Orientada a Objetos.
+        Las clases son plantillas que permiten crear objetos.
+        Los objetos representan entidades con atributos y métodos.
     </p>
-
-    <p>
-        Una clase funciona como una plantilla que define atributos
-        y comportamientos, mientras que un objeto es una instancia
-        creada a partir de esa clase.
-    </p>
-
-    <!-- EJEMPLO 1 -->
 
     <div class="card">
 
-        <h3>Ejemplo 1: Clase Persona</h3>
+        <h3>Ejemplo 1</h3>
 
         <pre>
 <code>
 class Persona {
 
     String nombre;
-    int edad;
 
     void saludar() {
-        System.out.println("Hola, soy " + nombre);
-    }
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Persona persona1 = new Persona();
-
-        persona1.nombre = "Juan";
-        persona1.edad = 20;
-
-        persona1.saludar();
+        System.out.println("Hola");
     }
 }
 </code>
@@ -100,11 +63,9 @@ public class Main {
 
     </div>
 
-    <!-- EJEMPLO 2 -->
-
     <div class="card">
 
-        <h3>Ejemplo 2: Clase Vehiculo</h3>
+        <h3>Ejemplo 2</h3>
 
         <pre>
 <code>
@@ -112,45 +73,24 @@ class Vehiculo {
 
     String marca;
     int velocidad;
-
-    void acelerar() {
-        velocidad += 10;
-    }
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Vehiculo carro = new Vehiculo();
-
-        carro.marca = "Toyota";
-        carro.velocidad = 50;
-
-        carro.acelerar();
-
-        System.out.println(carro.velocidad);
-    }
 }
 </code>
 </pre>
 
     </div>
 
-    <!-- EJERCICIOS -->
-
     <div class="ejercicios">
 
-        <h3>Ejercicios Propuestos</h3>
+        <h3>Ejercicios</h3>
 
         <ul>
 
             <li>
-                Crear una clase Estudiante con atributos nombre y nota.
+                Crear una clase Estudiante con atributos y métodos.
             </li>
 
             <li>
-                Diseñar una clase TiendaVirtual con atributos producto y precio.
+                Diseñar una clase Producto para una tienda virtual.
             </li>
 
         </ul>
@@ -163,119 +103,55 @@ public class Main {
 
 <section class="tema" id="tema2">
 
-    <h2>2. Composición y Modularización del Código</h2>
+    <h2>2. Composición y Modularización</h2>
 
     <p>
-        La composición es una técnica de Programación Orientada a Objetos
-        donde una clase contiene objetos de otras clases para construir
-        funcionalidades más complejas.
+        La composición representa relaciones entre objetos.
+        Permite construir sistemas más organizados y reutilizables.
     </p>
-
-    <p>
-        La modularización permite dividir el código en partes pequeñas,
-        organizadas y reutilizables.
-    </p>
-
-    <!-- EJEMPLO 1 -->
 
     <div class="card">
 
-        <h3>Ejemplo 1: Composición entre Auto y Motor</h3>
+        <h3>Ejemplo 1</h3>
 
         <pre>
 <code>
-class Motor {
+class Computador {
 
-    void encender() {
-        System.out.println("Motor encendido");
-    }
-}
-
-class Auto {
-
-    Motor motor = new Motor();
-
-    void arrancar() {
-
-        motor.encender();
-
-        System.out.println("Auto en movimiento");
-    }
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Auto auto = new Auto();
-
-        auto.arrancar();
-    }
+    Procesador procesador;
 }
 </code>
 </pre>
 
     </div>
 
-    <!-- EJEMPLO 2 -->
-
     <div class="card">
 
-        <h3>Ejemplo 2: Sistema Biblioteca</h3>
+        <h3>Ejemplo 2</h3>
 
         <pre>
 <code>
-class Libro {
+class Casa {
 
-    String titulo;
-}
-
-class Usuario {
-
-    String nombre;
-}
-
-class Prestamo {
-
-    Libro libro;
-    Usuario usuario;
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Libro libro = new Libro();
-        Usuario usuario = new Usuario();
-
-        Prestamo prestamo = new Prestamo();
-
-        prestamo.libro = libro;
-        prestamo.usuario = usuario;
-
-        System.out.println("Prestamo realizado");
-    }
+    Habitacion habitacion;
 }
 </code>
 </pre>
 
     </div>
-
-    <!-- EJERCICIOS -->
 
     <div class="ejercicios">
 
-        <h3>Ejercicios Propuestos</h3>
+        <h3>Ejercicios</h3>
 
         <ul>
 
             <li>
-                Crear una clase Computador que tenga una clase Procesador.
+                Crear una clase Auto con una clase Motor.
             </li>
 
             <li>
-                Diseñar un sistema modular utilizando clases Libro,
-                Usuario y Prestamo.
+                Diseñar un sistema modular para biblioteca.
             </li>
 
         </ul>
@@ -284,12 +160,10 @@ public class Main {
 
 </section>
 
-<!-- FOOTER -->
-
 <footer class="footer">
 
     <p>
-        Proyecto académico de Programación Orientada a Objetos
+        Proyecto académico POO
     </p>
 
 </footer>
