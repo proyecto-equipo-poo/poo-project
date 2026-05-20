@@ -21,6 +21,7 @@
         <a href="#tema2">Tema 2</a>
         <a href="#tema3">Tema 3</a>
         <a href="#tema4">Tema 4</a>
+        <a href="#tema5">Tema 5</a>
     </nav>
 
 </header>
@@ -618,6 +619,209 @@ public class Main {
             <li>
                 Diseñar un sistema de biblioteca utilizando
                 colecciones para almacenar libros y usuarios.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- TEMA 5 -->
+
+<section class="tema" id="tema5">
+
+    <h2>5. Lectura y Escritura de Archivos con Objetos</h2>
+
+    <p>
+        La lectura y escritura de archivos con objetos permite
+        almacenar información de manera permanente en archivos.
+    </p>
+
+    <p>
+        En Java, este proceso se realiza mediante serialización,
+        permitiendo guardar objetos completos y recuperarlos
+        posteriormente.
+    </p>
+
+    <!-- DEFINICION -->
+
+    <div class="card">
+
+        <h3>Definición</h3>
+
+        <p>
+            La serialización es el proceso de convertir un objeto
+            en una secuencia de bytes para almacenarlo en un archivo.
+        </p>
+
+        <p>
+            Posteriormente, el objeto puede recuperarse mediante
+            deserialización.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características</h3>
+
+        <ul>
+
+            <li>Permite guardar objetos completos.</li>
+
+            <li>Facilita la persistencia de datos.</li>
+
+            <li>Reduce la pérdida de información.</li>
+
+            <li>Mejora la organización de sistemas.</li>
+
+            <li>Utiliza clases especializadas de Java IO.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre>
+<code>
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Estudiante implements Serializable {
+
+    String nombre;
+
+    public Estudiante(String nombre) {
+
+        this.nombre = nombre;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            Estudiante estudiante =
+                new Estudiante("Juan");
+
+            FileOutputStream archivo =
+                new FileOutputStream("datos.dat");
+
+            ObjectOutputStream salida =
+                new ObjectOutputStream(archivo);
+
+            salida.writeObject(estudiante);
+
+            salida.close();
+
+            System.out.println("Objeto guardado");
+
+        } catch (Exception e) {
+
+            System.out.println("Error al guardar");
+        }
+    }
+}
+</code>
+</pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            La clase Estudiante implementa Serializable,
+            permitiendo convertir el objeto en bytes.
+        </p>
+
+        <p>
+            ObjectOutputStream se utiliza para escribir
+            el objeto dentro de un archivo.
+        </p>
+
+        <p>
+            Gracias a esto, la información puede almacenarse
+            de manera permanente.
+        </p>
+
+    </div>
+
+    <!-- VENTAJAS -->
+
+    <div class="card">
+
+        <h3>Ventajas</h3>
+
+        <ul>
+
+            <li>Permite guardar información del sistema.</li>
+
+            <li>Facilita la recuperación de datos.</li>
+
+            <li>Mejora la persistencia de aplicaciones.</li>
+
+            <li>Permite trabajar directamente con objetos.</li>
+
+            <li>Reduce el uso de variables temporales.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- RELACION CON POO -->
+
+    <div class="card">
+
+        <h3>Relación con POO</h3>
+
+        <p>
+            Este tema se relaciona con POO porque se trabaja
+            directamente con objetos creados a partir de clases.
+        </p>
+
+        <p>
+            La serialización permite almacenar el estado
+            completo de un objeto.
+        </p>
+
+        <p>
+            Esto demuestra reutilización, encapsulamiento
+            y manejo de entidades orientadas a objetos.
+        </p>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear un sistema que guarde objetos
+                de una clase Producto en un archivo.
+            </li>
+
+            <li>
+                Diseñar un programa que lea información
+                de estudiantes desde un archivo serializado.
             </li>
 
         </ul>
