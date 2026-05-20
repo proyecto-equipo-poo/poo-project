@@ -24,6 +24,7 @@
         <a href="#tema5">Tema 5</a>
         <a href="#tema6">Tema 6</a>
         <a href="#tema7">Tema 7</a>
+        <a href="#tema7">Tema 8</a>
     </nav>
 
 </header>
@@ -1238,6 +1239,207 @@ public class Main {
 
             <li>
                 Investigar las diferencias entre JDK, JRE y JVM.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TEMA 8 -->
+<!-- ========================= -->
+
+<section class="tema" id="tema8">
+
+    <h2>8. Clases y Objetos en Java</h2>
+
+    <p>
+        Las clases y los objetos son la base fundamental de la
+        Programación Orientada a Objetos (POO).
+    </p>
+
+    <p>
+        Una clase es una plantilla que define atributos y métodos,
+        mientras que un objeto es una instancia real creada a partir
+        de esa clase.
+    </p>
+
+    <!-- DEFINICION -->
+
+    <div class="card">
+
+        <h3>Definición</h3>
+
+        <p>
+            En Java, una clase permite representar entidades del mundo real
+            mediante atributos y comportamientos.
+        </p>
+
+        <p>
+            Los objetos contienen valores propios y pueden interactuar entre sí,
+            permitiendo construir programas organizados, reutilizables y escalables.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características Principales</h3>
+
+        <ul>
+
+            <li>
+                Las clases funcionan como plantillas para crear objetos.
+            </li>
+
+            <li>
+                Los objetos poseen atributos y métodos propios.
+            </li>
+
+            <li>
+                Permiten aplicar encapsulamiento y reutilización.
+            </li>
+
+            <li>
+                Facilitan la organización y mantenimiento del código.
+            </li>
+
+            <li>
+                Son fundamentales en todos los pilares de la POO.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- ESTRUCTURA -->
+
+    <div class="card">
+
+        <h3>Estructura Básica de una Clase</h3>
+
+        <pre><code>
+class Persona {
+
+    String nombre;
+    int edad;
+
+    void saludar() {
+
+        System.out.println("Hola, soy " + nombre);
+
+    }
+
+}
+</code></pre>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre><code>
+class Estudiante {
+
+    String nombre;
+    int semestre;
+
+    void mostrarDatos() {
+
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Semestre: " + semestre);
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Estudiante estudiante1 = new Estudiante();
+
+        estudiante1.nombre = "Carlos";
+        estudiante1.semestre = 3;
+
+        estudiante1.mostrarDatos();
+
+    }
+
+}
+</code></pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            En este ejemplo se crea la clase <strong>Estudiante</strong>,
+            la cual contiene atributos y un método.
+        </p>
+
+        <p>
+            Posteriormente se crea un objeto llamado
+            <strong>estudiante1</strong>, al cual se le asignan valores.
+        </p>
+
+        <p>
+            Finalmente, el método <strong>mostrarDatos()</strong>
+            imprime la información del objeto.
+        </p>
+
+    </div>
+
+    <!-- IMPORTANCIA -->
+
+    <div class="card">
+
+        <h3>Importancia en la POO</h3>
+
+        <p>
+            Las clases y objetos permiten modelar sistemas reales mediante
+            entidades independientes y organizadas.
+        </p>
+
+        <p>
+            Gracias a esto, Java facilita el desarrollo de aplicaciones
+            mantenibles, reutilizables y escalables.
+        </p>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear una clase llamada <strong>Libro</strong>
+                con atributos título y autor.
+            </li>
+
+            <li>
+                Crear un objeto de la clase <strong>Vehiculo</strong>
+                y mostrar su información.
+            </li>
+
+            <li>
+                Diseñar una clase <strong>Empleado</strong>
+                con un método para mostrar salario.
             </li>
 
         </ul>
