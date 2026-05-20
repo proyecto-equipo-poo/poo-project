@@ -20,6 +20,7 @@
         <a href="#tema1">Tema 1</a>
         <a href="#tema2">Tema 2</a>
         <a href="#tema3">Tema 3</a>
+        <a href="#tema4">Tema 4</a>
     </nav>
 
 </header>
@@ -436,6 +437,187 @@ public class Main {
             <li>
                 Diseñar un sistema que valide si un usuario
                 ingresó correctamente una contraseña.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- TEMA 4 -->
+
+<section class="tema" id="tema4">
+
+    <h2>4. Colecciones y Estructuras de Datos</h2>
+
+    <p>
+        Las colecciones y estructuras de datos permiten almacenar,
+        organizar y manipular grandes cantidades de información
+        dentro de un programa.
+    </p>
+
+    <p>
+        En Java, las colecciones forman parte del Java Collections Framework,
+        el cual proporciona clases y métodos reutilizables para trabajar
+        con datos de manera eficiente.
+    </p>
+
+    <!-- DEFINICION -->
+
+    <div class="card">
+
+        <h3>Definición</h3>
+
+        <p>
+            Una colección es un objeto que permite almacenar múltiples
+            elementos en una sola estructura.
+        </p>
+
+        <p>
+            Algunas colecciones comunes en Java son:
+            ArrayList, LinkedList, HashSet y HashMap.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características</h3>
+
+        <ul>
+
+            <li>Permiten almacenar múltiples objetos.</li>
+
+            <li>Facilitan la búsqueda y organización de datos.</li>
+
+            <li>Son dinámicas y flexibles.</li>
+
+            <li>Reducen la complejidad del código.</li>
+
+            <li>Forman parte de la biblioteca estándar de Java.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre>
+<code>
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> estudiantes = new ArrayList<>();
+
+        estudiantes.add("Juan");
+        estudiantes.add("Maria");
+        estudiantes.add("Carlos");
+
+        for (String nombre : estudiantes) {
+
+            System.out.println(nombre);
+        }
+    }
+}
+</code>
+</pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            En este ejemplo se utiliza un ArrayList para almacenar
+            nombres de estudiantes.
+        </p>
+
+        <p>
+            El método add() permite agregar elementos a la colección,
+            mientras que el ciclo for-each recorre cada objeto almacenado.
+        </p>
+
+        <p>
+            Esto demuestra cómo las colecciones facilitan el manejo
+            dinámico de datos en Java.
+        </p>
+
+    </div>
+
+    <!-- VENTAJAS -->
+
+    <div class="card">
+
+        <h3>Ventajas</h3>
+
+        <ul>
+
+            <li>Mayor organización de datos.</li>
+
+            <li>Facilidad para agregar y eliminar elementos.</li>
+
+            <li>Mayor reutilización de código.</li>
+
+            <li>Mejor rendimiento en aplicaciones grandes.</li>
+
+            <li>Facilitan el desarrollo de sistemas complejos.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- RELACION CON POO -->
+
+    <div class="card">
+
+        <h3>Relación con POO</h3>
+
+        <p>
+            Las colecciones trabajan directamente con objetos,
+            lo cual es fundamental en Programación Orientada a Objetos.
+        </p>
+
+        <p>
+            Por ejemplo, un ArrayList puede almacenar objetos
+            creados a partir de una clase específica.
+        </p>
+
+        <p>
+            Esto permite organizar entidades del sistema
+            de manera eficiente y reutilizable.
+        </p>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear un ArrayList que almacene objetos
+                de una clase Producto.
+            </li>
+
+            <li>
+                Diseñar un sistema de biblioteca utilizando
+                colecciones para almacenar libros y usuarios.
             </li>
 
         </ul>
