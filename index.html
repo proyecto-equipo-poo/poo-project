@@ -27,6 +27,7 @@
         <a href="#tema8">Tema 8</a>
         <a href="#tema9">Tema 9</a>
         <a href="#tema10">Tema 10</a>
+        <a href="#tema11">Tema 11</a>
     </nav>
 
 </header>
@@ -1825,6 +1826,223 @@ public class Main {
 
             <li>
                 Diseñar una clase Producto utilizando sobrecarga.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ===================== TEMA 11 ===================== -->
+<section class="tema" id="tema11">
+
+    <h2>11. Herencia en Java</h2>
+
+    <p>
+        La herencia es uno de los pilares fundamentales de la
+        Programación Orientada a Objetos (POO).
+    </p>
+
+    <p>
+        Permite que una clase herede atributos y métodos de otra clase,
+        favoreciendo la reutilización de código y la organización
+        de sistemas complejos.
+    </p>
+
+    <!-- DEFINICION -->
+    <div class="card">
+
+        <h3>¿Qué es la Herencia?</h3>
+
+        <p>
+            La herencia consiste en crear una nueva clase basada
+            en otra clase existente.
+        </p>
+
+        <p>
+            La clase que hereda se denomina
+            <strong>subclase</strong> o clase hija,
+            mientras que la clase original se llama
+            <strong>superclase</strong> o clase padre.
+        </p>
+
+    </div>
+
+    <!-- HERENCIA SIMPLE -->
+    <div class="card">
+
+        <h3>Herencia Simple</h3>
+
+        <p>
+            Java utiliza herencia simple, lo que significa que
+            una clase solo puede heredar directamente de una sola clase.
+        </p>
+
+        <p>
+            Para heredar se utiliza la palabra reservada
+            <strong>extends</strong>.
+        </p>
+
+    </div>
+
+    <!-- SUPER -->
+    <div class="card">
+
+        <h3>Uso de super()</h3>
+
+        <p>
+            La palabra reservada <strong>super</strong>
+            permite acceder a atributos, métodos y constructores
+            de la clase padre.
+        </p>
+
+        <p>
+            Es muy utilizada para reutilizar inicializaciones
+            y evitar duplicación de código.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+    <div class="card">
+
+        <h3>Características de la Herencia</h3>
+
+        <ul>
+
+            <li>Permite reutilizar código.</li>
+
+            <li>Facilita la organización de clases.</li>
+
+            <li>Reduce la duplicación de atributos y métodos.</li>
+
+            <li>Favorece la escalabilidad de programas.</li>
+
+            <li>Es fundamental para el polimorfismo.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO -->
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre><code>
+class Persona {
+
+    String nombre;
+
+    public Persona(String nombre) {
+
+        this.nombre = nombre;
+    }
+
+    void mostrarNombre() {
+
+        System.out.println("Nombre: " + nombre);
+    }
+
+}
+
+class Estudiante extends Persona {
+
+    int semestre;
+
+    public Estudiante(String nombre, int semestre) {
+
+        super(nombre);
+
+        this.semestre = semestre;
+    }
+
+    void mostrarSemestre() {
+
+        System.out.println("Semestre: " + semestre);
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Estudiante estudiante =
+            new Estudiante("Carlos", 3);
+
+        estudiante.mostrarNombre();
+
+        estudiante.mostrarSemestre();
+
+    }
+
+}
+</code></pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            La clase <strong>Estudiante</strong> hereda
+            de la clase <strong>Persona</strong>.
+        </p>
+
+        <p>
+            Gracias a la herencia, la subclase puede utilizar
+            el atributo y método definidos en la clase padre.
+        </p>
+
+        <p>
+            El constructor utiliza <strong>super(nombre)</strong>
+            para inicializar el atributo heredado.
+        </p>
+
+    </div>
+
+    <!-- IMPORTANCIA -->
+    <div class="card">
+
+        <h3>Importancia en la POO</h3>
+
+        <ul>
+
+            <li>Favorece la reutilización de código.</li>
+
+            <li>Mejora la organización de sistemas.</li>
+
+            <li>Permite construir jerarquías de clases.</li>
+
+            <li>Facilita el mantenimiento del software.</li>
+
+            <li>Reduce redundancia en programas.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear una clase Animal y una subclase Perro.
+            </li>
+
+            <li>
+                Diseñar una clase Vehiculo y una subclase Moto.
+            </li>
+
+            <li>
+                Implementar un constructor utilizando super().
             </li>
 
         </ul>
