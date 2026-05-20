@@ -28,6 +28,7 @@
         <a href="#tema9">Tema 9</a>
         <a href="#tema10">Tema 10</a>
         <a href="#tema11">Tema 11</a>
+        <a href="#tema12">Tema 12</a>
     </nav>
 
 </header>
@@ -2043,6 +2044,229 @@ public class Main {
 
             <li>
                 Implementar un constructor utilizando super().
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ===================== TEMA 12 ===================== -->
+<section class="tema" id="tema12">
+
+    <h2>12. Polimorfismo y Sobreescritura de Métodos</h2>
+
+    <p>
+        El polimorfismo es uno de los pilares fundamentales
+        de la Programación Orientada a Objetos (POO).
+    </p>
+
+    <p>
+        Permite que un mismo método tenga diferentes comportamientos
+        dependiendo del objeto que lo utilice.
+    </p>
+
+    <p>
+        En Java, el polimorfismo se aplica principalmente mediante
+        la herencia y la sobreescritura de métodos.
+    </p>
+
+    <!-- DEFINICION -->
+    <div class="card">
+
+        <h3>¿Qué es el Polimorfismo?</h3>
+
+        <p>
+            El término polimorfismo significa
+            "muchas formas".
+        </p>
+
+        <p>
+            En POO, permite que diferentes clases respondan
+            de manera distinta al mismo método.
+        </p>
+
+    </div>
+
+    <!-- SOBRESCRITURA -->
+    <div class="card">
+
+        <h3>Sobreescritura de Métodos</h3>
+
+        <p>
+            La sobreescritura ocurre cuando una subclase redefine
+            un método heredado de la clase padre.
+        </p>
+
+        <p>
+            Esto permite adaptar comportamientos específicos
+            en cada objeto.
+        </p>
+
+    </div>
+
+    <!-- POLIMORFISMO DINAMICO -->
+    <div class="card">
+
+        <h3>Polimorfismo Dinámico</h3>
+
+        <p>
+            El polimorfismo dinámico ocurre cuando el método
+            que se ejecuta se determina en tiempo de ejecución.
+        </p>
+
+        <p>
+            Esto sucede cuando una referencia de la clase padre
+            apunta a objetos de diferentes subclases.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+    <div class="card">
+
+        <h3>Características</h3>
+
+        <ul>
+
+            <li>Permite reutilización de código.</li>
+
+            <li>Facilita la flexibilidad de programas.</li>
+
+            <li>Reduce la complejidad del sistema.</li>
+
+            <li>Trabaja junto con la herencia.</li>
+
+            <li>Mejora la escalabilidad del software.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO -->
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre><code>
+class Animal {
+
+    void hacerSonido() {
+
+        System.out.println("El animal hace un sonido");
+    }
+
+}
+
+class Perro extends Animal {
+
+    @Override
+    void hacerSonido() {
+
+        System.out.println("El perro ladra");
+    }
+
+}
+
+class Gato extends Animal {
+
+    @Override
+    void hacerSonido() {
+
+        System.out.println("El gato maulla");
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal animal1 = new Perro();
+
+        Animal animal2 = new Gato();
+
+        animal1.hacerSonido();
+
+        animal2.hacerSonido();
+
+    }
+
+}
+</code></pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            La clase <strong>Animal</strong> define el método
+            <strong>hacerSonido()</strong>.
+        </p>
+
+        <p>
+            Las clases <strong>Perro</strong> y
+            <strong>Gato</strong> sobrescriben ese método
+            con comportamientos diferentes.
+        </p>
+
+        <p>
+            Aunque las variables son de tipo
+            <strong>Animal</strong>, Java ejecuta
+            el método correspondiente al objeto real.
+        </p>
+
+        <p>
+            Esto demuestra el polimorfismo dinámico.
+        </p>
+
+    </div>
+
+    <!-- IMPORTANCIA -->
+    <div class="card">
+
+        <h3>Importancia en la POO</h3>
+
+        <ul>
+
+            <li>Permite programas más flexibles.</li>
+
+            <li>Facilita la reutilización de métodos.</li>
+
+            <li>Reduce duplicación de código.</li>
+
+            <li>Mejora la organización del sistema.</li>
+
+            <li>Favorece la extensibilidad de aplicaciones.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear una clase Figura y subclases
+                Circulo y Rectangulo.
+            </li>
+
+            <li>
+                Implementar polimorfismo con una clase
+                Vehiculo y subclases Carro y Moto.
+            </li>
+
+            <li>
+                Sobrescribir un método mostrarInformacion()
+                en diferentes clases.
             </li>
 
         </ul>
