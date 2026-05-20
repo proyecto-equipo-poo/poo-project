@@ -264,6 +264,185 @@ public class Main {
 
 </section>
 
+<!-- TEMA 3 -->
+
+<section class="tema" id="tema3">
+
+    <h2>3. Manejo de Errores y Excepciones</h2>
+
+    <p>
+        El manejo de errores y excepciones es fundamental en la
+        Programación Orientada a Objetos porque permite controlar
+        situaciones inesperadas durante la ejecución del programa.
+    </p>
+
+    <p>
+        En Java, las excepciones ayudan a evitar que el sistema
+        finalice de forma incorrecta, mejorando la estabilidad
+        y seguridad del software.
+    </p>
+
+    <!-- DEFINICION -->
+
+    <div class="card">
+
+        <h3>Definición</h3>
+
+        <p>
+            Una excepción es un evento que ocurre durante la ejecución
+            de un programa y altera el flujo normal de las instrucciones.
+        </p>
+
+        <p>
+            Java utiliza las palabras reservadas
+            try, catch y finally para manejar excepciones.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características</h3>
+
+        <ul>
+
+            <li>Permiten controlar errores de ejecución.</li>
+
+            <li>Evitan que el programa termine inesperadamente.</li>
+
+            <li>Facilitan la depuración del sistema.</li>
+
+            <li>Mejoran la seguridad y estabilidad del software.</li>
+
+            <li>Permiten separar la lógica del manejo de errores.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre>
+<code>
+public class Main {
+
+    public static void main(String[] args) {
+
+        try {
+
+            int resultado = 10 / 0;
+
+            System.out.println(resultado);
+
+        } catch (ArithmeticException e) {
+
+            System.out.println("Error: division por cero");
+
+        } finally {
+
+            System.out.println("Fin del programa");
+        }
+    }
+}
+</code>
+</pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            En el ejemplo se intenta realizar una división entre cero,
+            lo que genera una excepción de tipo ArithmeticException.
+        </p>
+
+        <p>
+            El bloque catch captura el error y evita que el programa
+            termine de manera abrupta.
+        </p>
+
+        <p>
+            El bloque finally se ejecuta siempre, independientemente
+            de si ocurre o no una excepción.
+        </p>
+
+    </div>
+
+    <!-- VENTAJAS -->
+
+    <div class="card">
+
+        <h3>Ventajas</h3>
+
+        <ul>
+
+            <li>Mayor estabilidad del software.</li>
+
+            <li>Mejor experiencia para el usuario.</li>
+
+            <li>Facilita el mantenimiento del sistema.</li>
+
+            <li>Permite detectar errores de manera controlada.</li>
+
+            <li>Mejora la calidad del código.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- RELACION CON POO -->
+
+    <div class="card">
+
+        <h3>Relación con POO</h3>
+
+        <p>
+            El manejo de excepciones se relaciona con POO porque
+            las excepciones en Java son objetos que pertenecen
+            a clases específicas.
+        </p>
+
+        <p>
+            Además, permite crear sistemas más robustos,
+            organizados y mantenibles.
+        </p>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear un programa que capture un error
+                al ingresar texto en una variable numérica.
+            </li>
+
+            <li>
+                Diseñar un sistema que valide si un usuario
+                ingresó correctamente una contraseña.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
 <footer class="footer">
 
     <p>
