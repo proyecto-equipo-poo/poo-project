@@ -26,6 +26,7 @@
         <a href="#tema7">Tema 7</a>
         <a href="#tema8">Tema 8</a>
         <a href="#tema9">Tema 9</a>
+        <a href="#tema10">Tema 10</a>
     </nav>
 
 </header>
@@ -1616,6 +1617,216 @@ class Persona {
             <li>Facilita el mantenimiento del código.</li>
             <li>Permite controlar el acceso a la información.</li>
             <li>Hace que las clases sean más organizadas y reutilizables.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ===================== TEMA 10 ===================== -->
+<section class="tema" id="tema10">
+
+    <h2>10. Constructores y Representación de Objetos</h2>
+
+    <p>
+        Los constructores son métodos especiales utilizados para inicializar
+        objetos en Java. Permiten asignar valores iniciales a los atributos
+        cuando se crea un objeto.
+    </p>
+
+    <p>
+        Además, Java utiliza el método <strong>toString()</strong> para
+        representar objetos en forma de texto y la sobrecarga permite crear
+        múltiples métodos o constructores con diferentes parámetros.
+    </p>
+
+    <!-- DEFINICION -->
+    <div class="card">
+
+        <h3>¿Qué es un Constructor?</h3>
+
+        <p>
+            Un constructor es un método especial que se ejecuta automáticamente
+            al crear un objeto.
+        </p>
+
+        <p>
+            Su nombre debe ser igual al de la clase y no posee tipo de retorno.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+    <div class="card">
+
+        <h3>Características de los Constructores</h3>
+
+        <ul>
+
+            <li>Se ejecutan automáticamente al crear objetos.</li>
+
+            <li>No tienen tipo de retorno.</li>
+
+            <li>Poseen el mismo nombre de la clase.</li>
+
+            <li>Pueden recibir parámetros.</li>
+
+            <li>Permiten inicializar atributos.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- TOSTRING -->
+    <div class="card">
+
+        <h3>Método toString()</h3>
+
+        <p>
+            El método <strong>toString()</strong> permite representar
+            un objeto como una cadena de texto.
+        </p>
+
+        <p>
+            Es útil para mostrar información de manera organizada y legible.
+        </p>
+
+    </div>
+
+    <!-- SOBRECARGA -->
+    <div class="card">
+
+        <h3>Sobrecarga de Métodos y Constructores</h3>
+
+        <p>
+            La sobrecarga consiste en crear múltiples métodos o constructores
+            con el mismo nombre pero diferentes parámetros.
+        </p>
+
+        <p>
+            Esto permite reutilizar código y mejorar la flexibilidad
+            de las clases.
+        </p>
+
+    </div>
+
+    <!-- EJEMPLO -->
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre><code>
+class Estudiante {
+
+    String nombre;
+    int edad;
+
+    // Constructor vacio
+    public Estudiante() {
+
+        nombre = "Sin nombre";
+        edad = 0;
+    }
+
+    // Constructor con parametros
+    public Estudiante(String nombre, int edad) {
+
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Metodo toString
+    public String toString() {
+
+        return "Nombre: " + nombre +
+               " Edad: " + edad;
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Estudiante estudiante1 =
+            new Estudiante();
+
+        Estudiante estudiante2 =
+            new Estudiante("Carlos", 20);
+
+        System.out.println(estudiante1);
+
+        System.out.println(estudiante2);
+
+    }
+
+}
+</code></pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            La clase <strong>Estudiante</strong> posee dos constructores:
+            uno vacío y otro con parámetros.
+        </p>
+
+        <p>
+            Esto demuestra la sobrecarga de constructores, permitiendo
+            crear objetos de diferentes maneras.
+        </p>
+
+        <p>
+            Además, el método <strong>toString()</strong> devuelve
+            una representación textual del objeto.
+        </p>
+
+    </div>
+
+    <!-- IMPORTANCIA -->
+    <div class="card">
+
+        <h3>Importancia en la POO</h3>
+
+        <ul>
+
+            <li>Facilitan la creación de objetos.</li>
+
+            <li>Permiten inicializar atributos correctamente.</li>
+
+            <li>Mejoran la reutilización de código.</li>
+
+            <li>Hacen más legible la representación de objetos.</li>
+
+            <li>Favorecen la flexibilidad mediante sobrecarga.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear una clase Libro con dos constructores diferentes.
+            </li>
+
+            <li>
+                Implementar el método toString() en una clase Vehiculo.
+            </li>
+
+            <li>
+                Diseñar una clase Producto utilizando sobrecarga.
+            </li>
+
         </ul>
 
     </div>
