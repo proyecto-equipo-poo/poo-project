@@ -46,14 +46,23 @@
     <h2>1. Clases Abstractas e Interfaces</h2>
 
     <p>
-        Las clases abstractas y las interfaces son pilares fundamentales
-        de la Programación Orientada a Objetos porque permiten aplicar
-        abstracción y polimorfismo.
+        Las clases abstractas y las interfaces son conceptos fundamentales
+        de la Programación Orientada a Objetos. Permiten aplicar
+        abstracción y polimorfismo, facilitando la reutilización
+        del código y la organización de sistemas complejos.
+    </p>
+
+    <h3>¿Qué es una clase abstracta?</h3>
+
+    <p>
+        Una clase abstracta es una clase que no puede ser instanciada
+        directamente y sirve como base para otras clases.
+        Puede contener métodos abstractos y métodos normales.
     </p>
 
     <div class="card">
 
-        <h3>Ejemplo 1</h3>
+        <h3>Ejemplo 1 - Clase Abstracta</h3>
 
         <pre><code>
 abstract class Animal {
@@ -67,13 +76,29 @@ class Perro extends Animal {
         System.out.println("Guau");
     }
 }
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Perro perro = new Perro();
+        perro.sonido();
+    }
+}
 </code></pre>
 
     </div>
 
+    <h3>¿Qué es una interfaz?</h3>
+
+    <p>
+        Una interfaz define comportamientos que otras clases deben implementar.
+        En Java se utiliza la palabra reservada interface.
+    </p>
+
     <div class="card">
 
-        <h3>Ejemplo 2</h3>
+        <h3>Ejemplo 2 - Interfaz</h3>
 
         <pre><code>
 interface Vehiculo {
@@ -84,10 +109,37 @@ interface Vehiculo {
 class Carro implements Vehiculo {
 
     public void acelerar() {
-        System.out.println("Acelerando...");
+        System.out.println("El carro acelera");
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Carro carro = new Carro();
+        carro.acelerar();
     }
 }
 </code></pre>
+
+    </div>
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+            <li>
+                Crear una clase abstracta llamada Empleado
+                con un método abstracto calcularSalario().
+            </li>
+
+            <li>
+                Crear una interfaz llamada PagoOnline
+                e implementarla en una clase TiendaVirtual.
+            </li>
+        </ul>
 
     </div>
 
