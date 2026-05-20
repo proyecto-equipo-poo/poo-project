@@ -23,6 +23,7 @@
         <a href="#tema4">Tema 4</a>
         <a href="#tema5">Tema 5</a>
         <a href="#tema6">Tema 6</a>
+        <a href="#tema7">Tema 7</a>
     </nav>
 
 </header>
@@ -511,28 +512,18 @@ public class Main {
 
         <h3>Ejemplo Resuelto</h3>
 
-        <pre>
-<code>
-import java.util.ArrayList;
+        <pre><code>
+ArrayList&lt;String&gt; estudiantes = new ArrayList&lt;&gt;();
 
-public class Main {
+estudiantes.add("Ana");
+estudiantes.add("Carlos");
 
-    public static void main(String[] args) {
+for (String nombre : estudiantes) {
 
-        ArrayList<String> estudiantes = new ArrayList<>();
+    System.out.println(nombre);
 
-        estudiantes.add("Juan");
-        estudiantes.add("Maria");
-        estudiantes.add("Carlos");
-
-        for (String nombre : estudiantes) {
-
-            System.out.println(nombre);
-        }
-    }
 }
-</code>
-</pre>
+</code></pre>
 
     </div>
 
@@ -1003,6 +994,250 @@ class Calculadora {
             <li>
                 Aplicar buenas prácticas a un sistema
                 de gestión de estudiantes.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- TEMA 7 -->
+
+<section class="tema" id="tema7">
+
+    <h2>7. Introducción a la POO y Entorno de Desarrollo en Java</h2>
+
+    <p>
+        La Programación Orientada a Objetos (POO) es un paradigma
+        de programación que organiza el software mediante clases
+        y objetos, permitiendo desarrollar sistemas más reutilizables,
+        organizados y escalables.
+    </p>
+
+    <p>
+        Java es uno de los lenguajes más utilizados para aplicar POO,
+        gracias a sus herramientas de desarrollo, bibliotecas
+        y compatibilidad multiplataforma.
+    </p>
+
+    <!-- DEFINICION -->
+
+    <div class="card">
+
+        <h3>Definición</h3>
+
+        <p>
+            La POO se basa en representar entidades del mundo real
+            mediante objetos que poseen atributos y métodos.
+        </p>
+
+        <p>
+            Para desarrollar aplicaciones Java se utilizan entornos
+            de desarrollo (IDE) y componentes fundamentales como
+            JDK y JVM.
+        </p>
+
+    </div>
+
+    <!-- ENTORNO -->
+
+    <div class="card">
+
+        <h3>Entornos de Desarrollo en Java</h3>
+
+        <ul>
+
+            <li>
+                <strong>IntelliJ IDEA:</strong>
+                IDE moderno y ampliamente utilizado para Java.
+            </li>
+
+            <li>
+                <strong>Eclipse:</strong>
+                entorno flexible y de código abierto.
+            </li>
+
+            <li>
+                <strong>NetBeans:</strong>
+                IDE sencillo orientado a proyectos Java.
+            </li>
+
+            <li>
+                <strong>VS Code:</strong>
+                editor ligero compatible con Java mediante extensiones.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- COMPONENTES JAVA -->
+
+    <div class="card">
+
+        <h3>JDK, JVM y Paquetes</h3>
+
+        <ul>
+
+            <li>
+                <strong>JDK (Java Development Kit):</strong>
+                conjunto de herramientas necesarias para desarrollar
+                programas Java.
+            </li>
+
+            <li>
+                <strong>JVM (Java Virtual Machine):</strong>
+                máquina virtual encargada de ejecutar programas Java.
+            </li>
+
+            <li>
+                <strong>Paquetes:</strong>
+                mecanismo utilizado para organizar clases y evitar
+                conflictos de nombres.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características de la POO</h3>
+
+        <ul>
+
+            <li>Uso de clases y objetos.</li>
+
+            <li>Aplicación de encapsulamiento.</li>
+
+            <li>Permite herencia y polimorfismo.</li>
+
+            <li>Favorece la reutilización del código.</li>
+
+            <li>Facilita el mantenimiento del software.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre>
+<code>
+package proyecto;
+
+class Persona {
+
+    String nombre;
+
+    void saludar() {
+
+        System.out.println("Hola " + nombre);
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Persona persona = new Persona();
+
+        persona.nombre = "Juan";
+
+        persona.saludar();
+    }
+}
+</code>
+</pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            El ejemplo muestra una clase llamada Persona
+            con un atributo y un método.
+        </p>
+
+        <p>
+            Además, se utiliza un paquete para organizar
+            correctamente el proyecto Java.
+        </p>
+
+        <p>
+            Esto demuestra cómo la POO permite representar
+            objetos del mundo real mediante clases.
+        </p>
+
+    </div>
+
+    <!-- VENTAJAS -->
+
+    <div class="card">
+
+        <h3>Ventajas</h3>
+
+        <ul>
+
+            <li>Mayor organización del código.</li>
+
+            <li>Facilidad para reutilizar clases.</li>
+
+            <li>Mejor mantenimiento del software.</li>
+
+            <li>Compatibilidad multiplataforma con JVM.</li>
+
+            <li>Mayor escalabilidad de proyectos.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- RELACION CON POO -->
+
+    <div class="card">
+
+        <h3>Relación con POO</h3>
+
+        <p>
+            Este tema introduce los conceptos fundamentales
+            necesarios para comprender la Programación
+            Orientada a Objetos.
+        </p>
+
+        <p>
+            Además, explica el entorno utilizado para desarrollar
+            aplicaciones Java orientadas a objetos.
+        </p>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear una clase Estudiante dentro de un paquete
+                llamado universidad.
+            </li>
+
+            <li>
+                Investigar las diferencias entre JDK, JRE y JVM.
             </li>
 
         </ul>
