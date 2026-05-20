@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>POO Project</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -12,30 +11,35 @@
 
 <body>
 
+<!-- HEADER -->
+
 <header class="header">
 
-    <h2>POO PROJECT</h2>
+    <h2>POO Project</h2>
 
     <nav class="navbar">
         <a href="#inicio">Inicio</a>
         <a href="#tema1">Tema 1</a>
         <a href="#tema2">Tema 2</a>
-        <a href="#tema3">Tema 3</a>
-        <a href="#tema4">Tema 4</a>
-        <a href="#tema5">Tema 5</a>
-        <a href="#tema6">Tema 6</a>
     </nav>
 
 </header>
 
+<!-- HERO -->
+
 <section class="hero" id="inicio">
 
-    <h1>Programación Orientada a Objetos</h1>
+    <h1>
+        Programación Orientada a Objetos
+    </h1>
 
     <p>
-        Manual web académico sobre los temas fundamentales
-        de POO en Java.
+        Manual web académico sobre los temas fundamentales de POO en Java.
     </p>
+
+    <button>
+        Explorar Temas
+    </button>
 
 </section>
 
@@ -43,37 +47,36 @@
 
 <section class="tema" id="tema1">
 
-    <h2>1. Clases Abstractas e Interfaces</h2>
+    <h2>1. Clases y Objetos</h2>
 
     <p>
-        Las clases abstractas y las interfaces son conceptos fundamentales
-        de la Programación Orientada a Objetos. Permiten aplicar
-        abstracción y polimorfismo, facilitando la reutilización
-        del código y la organización de sistemas complejos.
+        Las clases y los objetos son pilares fundamentales de la Programación
+        Orientada a Objetos. Una clase funciona como una plantilla que define
+        atributos y comportamientos, mientras que un objeto es una instancia
+        creada a partir de esa clase.
     </p>
-
-    <h3>¿Qué es una clase abstracta?</h3>
 
     <p>
-        Una clase abstracta es una clase que no puede ser instanciada
-        directamente y sirve como base para otras clases.
-        Puede contener métodos abstractos y métodos normales.
+        En Java, las clases permiten representar entidades del mundo real
+        mediante propiedades y métodos, facilitando la organización y reutilización
+        del código.
     </p>
+
+    <!-- EJEMPLO 1 -->
 
     <div class="card">
 
-        <h3>Ejemplo 1 - Clase Abstracta</h3>
+        <h3>Ejemplo 1: Clase Persona</h3>
 
-        <pre><code>
-abstract class Animal {
+        <pre>
+<code>
+class Persona {
 
-    abstract void sonido();
-}
+    String nombre;
+    int edad;
 
-class Perro extends Animal {
-
-    void sonido() {
-        System.out.println("Guau");
+    void saludar() {
+        System.out.println("Hola, soy " + nombre);
     }
 }
 
@@ -81,35 +84,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Perro perro = new Perro();
-        perro.sonido();
+        Persona persona1 = new Persona();
+
+        persona1.nombre = "Juan";
+        persona1.edad = 20;
+
+        persona1.saludar();
     }
 }
-</code></pre>
+</code>
+</pre>
 
     </div>
 
-    <h3>¿Qué es una interfaz?</h3>
-
-    <p>
-        Una interfaz define comportamientos que otras clases deben implementar.
-        En Java se utiliza la palabra reservada interface.
-    </p>
+    <!-- EJEMPLO 2 -->
 
     <div class="card">
 
-        <h3>Ejemplo 2 - Interfaz</h3>
+        <h3>Ejemplo 2: Clase Vehiculo</h3>
 
-        <pre><code>
-interface Vehiculo {
+        <pre>
+<code>
+class Vehiculo {
 
-    void acelerar();
-}
+    String marca;
+    int velocidad;
 
-class Carro implements Vehiculo {
-
-    public void acelerar() {
-        System.out.println("El carro acelera");
+    void acelerar() {
+        velocidad += 10;
     }
 }
 
@@ -117,70 +119,71 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Carro carro = new Carro();
+        Vehiculo carro = new Vehiculo();
+
+        carro.marca = "Toyota";
+        carro.velocidad = 50;
+
         carro.acelerar();
+
+        System.out.println(carro.velocidad);
     }
 }
-</code></pre>
+</code>
+</pre>
 
     </div>
+
+    <!-- EJERCICIOS -->
 
     <div class="ejercicios">
 
         <h3>Ejercicios Propuestos</h3>
 
         <ul>
+
             <li>
-                Crear una clase abstracta llamada Empleado
-                con un método abstracto calcularSalario().
+                Crear una clase Estudiante con atributos nombre y nota,
+                además de un método para mostrar información.
             </li>
 
             <li>
-                Crear una interfaz llamada PagoOnline
-                e implementarla en una clase TiendaVirtual.
+                Diseñar una clase TiendaVirtual con atributos producto y precio,
+                e implementarla en una clase principal.
             </li>
+
         </ul>
 
     </div>
 
 </section>
 
-<footer class="footer">
+<!-- TEMA 2 -->
+
+<section class="tema" id="tema2">
+
+    <h2>2. Composición y Modularización del Código</h2>
 
     <p>
-        Proyecto académico de Programación Orientada a Objetos
+        La composición es una técnica de Programación Orientada a Objetos
+        donde una clase contiene objetos de otras clases para construir
+        funcionalidades más complejas.
     </p>
 
-    <!-- TEMA 2 -->
+    <p>
+        La modularización permite dividir el código en partes pequeñas,
+        organizadas y reutilizables, facilitando el mantenimiento
+        y escalabilidad del software.
+    </p>
 
-    <section class="tema" id="tema2">
+    <!-- EJEMPLO 1 -->
 
-        <h2>2. Composición y Modularización del Código</h2>
+    <div class="card">
 
-        <p>
-            La composición es una técnica de Programación Orientada a Objetos
-            donde una clase contiene objetos de otras clases para construir
-            funcionalidades más complejas.
-        </p>
+        <h3>Ejemplo 1: Composición entre Auto y Motor</h3>
 
-        <p>
-            La modularización permite dividir el código en partes pequeñas,
-            organizadas y reutilizables, facilitando el mantenimiento
-            y escalabilidad del software.
-        </p>
-
-        <h3>¿Qué es la composición?</h3>
-
-        <p>
-            En composición, una clase utiliza otra clase como atributo.
-            Esto representa relaciones del tipo "tiene un".
-        </p>
-
-        <div class="card">
-
-            <h3>Ejemplo 1 - Composición</h3>
-
-            <pre><code>
+        <pre>
+<code>
 class Motor {
 
     void encender() {
@@ -188,12 +191,13 @@ class Motor {
     }
 }
 
-class Carro {
+class Auto {
 
-    private Motor motor = new Motor();
+    Motor motor = new Motor();
 
     void arrancar() {
         motor.encender();
+        System.out.println("Auto en movimiento");
     }
 }
 
@@ -201,78 +205,97 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Carro carro = new Carro();
-        carro.arrancar();
+        Auto auto = new Auto();
+
+        auto.arrancar();
     }
 }
-</code></pre>
+</code>
+</pre>
 
-        </div>
+    </div>
 
-        <h3>¿Qué es la modularización?</h3>
+    <!-- EJEMPLO 2 -->
 
-        <p>
-            La modularización organiza el código en diferentes clases
-            y métodos independientes para mejorar la claridad
-            y reutilización del sistema.
-        </p>
+    <div class="card">
 
-        <div class="card">
+        <h3>Ejemplo 2: Modularización en una Biblioteca</h3>
 
-            <h3>Ejemplo 2 - Modularización</h3>
+        <pre>
+<code>
+class Libro {
 
-            <pre><code>
-class Calculadora {
+    String titulo;
+}
 
-    int sumar(int a, int b) {
-        return a + b;
-    }
+class Usuario {
 
-    int restar(int a, int b) {
-        return a - b;
-    }
+    String nombre;
+}
+
+class Prestamo {
+
+    Libro libro;
+    Usuario usuario;
 }
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Calculadora calc = new Calculadora();
+        Libro libro = new Libro();
+        Usuario usuario = new Usuario();
 
-        System.out.println(calc.sumar(5, 3));
-        System.out.println(calc.restar(10, 4));
+        Prestamo prestamo = new Prestamo();
+
+        prestamo.libro = libro;
+        prestamo.usuario = usuario;
+
+        System.out.println("Préstamo realizado");
     }
 }
-</code></pre>
+</code>
+</pre>
 
-        </div>
+    </div>
 
-        <div class="ejercicios">
+    <!-- EJERCICIOS -->
 
-            <h3>Ejercicios Propuestos</h3>
+    <div class="ejercicios">
 
-            <ul>
+        <h3>Ejercicios Propuestos</h3>
 
-                <li>
-                    Crear una clase Computador que tenga una clase
-                    Procesador utilizando composición.
-                </li>
+        <ul>
 
-                <li>
-                    Diseñar un sistema modular para una biblioteca
-                    utilizando clases separadas para Libro,
-                    Usuario y Prestamo.
-                </li>
+            <li>
+                Crear una clase Computador que tenga una clase
+                Procesador utilizando composición.
+            </li>
 
-            </ul>
+            <li>
+                Diseñar un sistema modular para una biblioteca
+                utilizando clases separadas para Libro,
+                Usuario y Prestamo.
+            </li>
 
-        </div>
+        </ul>
 
-    </section>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <p>
+        Proyecto académico de Programación Orientada a Objetos
+    </p>
 
 </footer>
 
 <script src="js/script.js"></script>
 
 </body>
+
 </html>
