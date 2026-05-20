@@ -57,10 +57,6 @@ El sitio contiene información teórica y práctica sobre diferentes temas funda
 
 ## Enlace del proyecto
 
-Pega aquí el enlace de GitHub Pages.
-
-Ejemplo:
-
 https://proyecto-equipo-poo.github.io/poo-project/
 
 ---
