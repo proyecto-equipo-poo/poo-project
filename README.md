@@ -50,6 +50,8 @@ El sitio contiene información teórica y práctica sobre diferentes temas funda
 ## Integrantes
 
 - Jesús David Tovar Parra
+- Fabio Garcia Fierro
+- Diego Fernando Mojica
 
 ---
 
