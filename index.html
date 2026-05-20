@@ -43,64 +43,209 @@
 
 </section>
 
-<!-- TEMA 1 -->
-
+<!-- ===================== TEMA 1 ===================== -->
 <section class="tema" id="tema1">
 
-    <h2>1. Clases y Objetos</h2>
+    <h2>1. Clases Abstractas e Interfaces</h2>
 
     <p>
-        Las clases son plantillas que permiten crear objetos.
-        Los objetos representan entidades con atributos y métodos.
+        Las clases abstractas e interfaces son elementos fundamentales
+        en la Programación Orientada a Objetos (POO), ya que permiten
+        definir estructuras generales para diferentes clases.
     </p>
 
+    <p>
+        Gracias a estos conceptos, Java facilita la reutilización
+        de código, la modularidad y la implementación de comportamientos
+        comunes en distintas clases.
+    </p>
+
+    <!-- DEFINICION -->
     <div class="card">
 
-        <h3>Ejemplo 1</h3>
+        <h3>¿Qué es una Clase Abstracta?</h3>
 
-        <pre>
-<code>
-class Persona {
+        <p>
+            Una clase abstracta es una clase que no puede ser instanciada
+            directamente y que sirve como base para otras clases.
+        </p>
 
-    String nombre;
-
-    void saludar() {
-        System.out.println("Hola");
-    }
-}
-</code>
-</pre>
+        <p>
+            Puede contener métodos normales y métodos abstractos,
+            los cuales deben ser implementados por las subclases.
+        </p>
 
     </div>
 
+    <!-- INTERFACES -->
     <div class="card">
 
-        <h3>Ejemplo 2</h3>
+        <h3>¿Qué es una Interfaz?</h3>
 
-        <pre>
-<code>
-class Vehiculo {
+        <p>
+            Una interfaz es una estructura que define métodos
+            que otras clases deben implementar.
+        </p>
 
-    String marca;
-    int velocidad;
-}
-</code>
-</pre>
+        <p>
+            Las interfaces permiten establecer comportamientos
+            comunes entre diferentes clases, favoreciendo
+            el polimorfismo y la flexibilidad del sistema.
+        </p>
 
     </div>
 
-    <div class="ejercicios">
+    <!-- CARACTERISTICAS -->
+    <div class="card">
 
-        <h3>Ejercicios</h3>
+        <h3>Características Principales</h3>
 
         <ul>
 
             <li>
-                Crear una clase Estudiante con atributos y métodos.
+                Las clases abstractas no pueden crear objetos directamente.
             </li>
 
             <li>
-                Diseñar una clase Producto para una tienda virtual.
+                Las interfaces definen comportamientos obligatorios.
+            </li>
+
+            <li>
+                Favorecen la reutilización de código.
+            </li>
+
+            <li>
+                Mejoran la organización y escalabilidad del software.
+            </li>
+
+            <li>
+                Permiten aplicar polimorfismo en Java.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO -->
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre><code>
+abstract class Animal {
+
+    abstract void hacerSonido();
+
+}
+
+interface Mascota {
+
+    void jugar();
+
+}
+
+class Perro extends Animal implements Mascota {
+
+    @Override
+    void hacerSonido() {
+
+        System.out.println("El perro ladra");
+
+    }
+
+    @Override
+    public void jugar() {
+
+        System.out.println("El perro juega");
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Perro perro = new Perro();
+
+        perro.hacerSonido();
+
+        perro.jugar();
+
+    }
+
+}
+</code></pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            La clase abstracta <strong>Animal</strong>
+            define el método abstracto
+            <strong>hacerSonido()</strong>.
+        </p>
+
+        <p>
+            La interfaz <strong>Mascota</strong>
+            obliga a implementar el método
+            <strong>jugar()</strong>.
+        </p>
+
+        <p>
+            La clase <strong>Perro</strong>
+            hereda de la clase abstracta e implementa
+            la interfaz, demostrando reutilización,
+            herencia y polimorfismo.
+        </p>
+
+    </div>
+
+    <!-- IMPORTANCIA -->
+    <div class="card">
+
+        <h3>Importancia en la POO</h3>
+
+        <ul>
+
+            <li>Permiten crear sistemas más flexibles.</li>
+
+            <li>Favorecen la reutilización de código.</li>
+
+            <li>Mejoran la organización de proyectos.</li>
+
+            <li>Facilitan el mantenimiento del software.</li>
+
+            <li>Ayudan a implementar polimorfismo.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Crear una clase abstracta Figura
+                con un método calcularArea().
+            </li>
+
+            <li>
+                Diseñar una interfaz Vehiculo
+                con el método acelerar().
+            </li>
+
+            <li>
+                Implementar una clase Carro
+                utilizando herencia e interfaces.
             </li>
 
         </ul>
