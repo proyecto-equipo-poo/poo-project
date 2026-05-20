@@ -22,6 +22,7 @@
         <a href="#tema3">Tema 3</a>
         <a href="#tema4">Tema 4</a>
         <a href="#tema5">Tema 5</a>
+        <a href="#tema6">Tema 6</a>
     </nav>
 
 </header>
@@ -822,6 +823,186 @@ public class Main {
             <li>
                 Diseñar un programa que lea información
                 de estudiantes desde un archivo serializado.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- TEMA 6 -->
+
+<section class="tema" id="tema6">
+
+    <h2>6. Buenas Prácticas, PEP8 y Refactorización</h2>
+
+    <p>
+        Las buenas prácticas de programación permiten desarrollar
+        software más organizado, legible y mantenible.
+    </p>
+
+    <p>
+        La guía PEP8 establece recomendaciones de estilo para escribir
+        código limpio, mientras que la refactorización consiste
+        en mejorar el código sin alterar su funcionamiento.
+    </p>
+
+    <!-- DEFINICION -->
+
+    <div class="card">
+
+        <h3>Definición</h3>
+
+        <p>
+            Las buenas prácticas son técnicas y recomendaciones
+            utilizadas para mejorar la calidad del software.
+        </p>
+
+        <p>
+            La refactorización reorganiza el código para hacerlo
+            más claro, reutilizable y fácil de mantener.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características</h3>
+
+        <ul>
+
+            <li>Mejoran la legibilidad del código.</li>
+
+            <li>Facilitan el mantenimiento del sistema.</li>
+
+            <li>Permiten detectar errores más fácilmente.</li>
+
+            <li>Favorecen la reutilización de código.</li>
+
+            <li>Promueven nombres claros y organizados.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre>
+<code>
+// Codigo sin buenas practicas
+
+class calc {
+
+    int s(int a,int b){
+
+        return a+b;
+    }
+}
+
+// Codigo refactorizado
+
+class Calculadora {
+
+    int sumar(int numero1, int numero2) {
+
+        return numero1 + numero2;
+    }
+}
+</code>
+</pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            En el primer ejemplo el código utiliza nombres poco claros
+            y mala organización.
+        </p>
+
+        <p>
+            En el segundo ejemplo se aplican buenas prácticas,
+            utilizando nombres descriptivos y mejor estructura.
+        </p>
+
+        <p>
+            Esto facilita la comprensión y mantenimiento del software.
+        </p>
+
+    </div>
+
+    <!-- VENTAJAS -->
+
+    <div class="card">
+
+        <h3>Ventajas</h3>
+
+        <ul>
+
+            <li>Mayor claridad del código.</li>
+
+            <li>Facilidad para trabajar en equipo.</li>
+
+            <li>Reducción de errores.</li>
+
+            <li>Mayor reutilización de componentes.</li>
+
+            <li>Mejor mantenimiento del sistema.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- RELACION CON POO -->
+
+    <div class="card">
+
+        <h3>Relación con POO</h3>
+
+        <p>
+            Las buenas prácticas mejoran la implementación
+            de principios de Programación Orientada a Objetos.
+        </p>
+
+        <p>
+            Permiten diseñar clases más organizadas,
+            reutilizables y fáciles de mantener.
+        </p>
+
+        <p>
+            La refactorización ayuda a optimizar sistemas
+            orientados a objetos sin modificar su comportamiento.
+        </p>
+
+    </div>
+
+    <!-- EJERCICIOS -->
+
+    <div class="ejercicios">
+
+        <h3>Ejercicios Propuestos</h3>
+
+        <ul>
+
+            <li>
+                Refactorizar una clase con nombres de variables
+                poco descriptivos.
+            </li>
+
+            <li>
+                Aplicar buenas prácticas a un sistema
+                de gestión de estudiantes.
             </li>
 
         </ul>
