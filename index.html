@@ -25,6 +25,7 @@
         <a href="#tema6">Tema 6</a>
         <a href="#tema7">Tema 7</a>
         <a href="#tema8">Tema 8</a>
+        <a href="#tema9">Tema 9</a>
     </nav>
 
 </header>
@@ -1442,6 +1443,179 @@ public class Main {
                 con un método para mostrar salario.
             </li>
 
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ===================== TEMA 9 ===================== -->
+<section class="tema" id="tema9">
+
+    <h2>9. Atributos, Métodos y Encapsulamiento</h2>
+
+    <p>
+        En Programación Orientada a Objetos, los atributos representan las
+        características o datos de un objeto, mientras que los métodos
+        representan las acciones o comportamientos que puede realizar.
+    </p>
+
+    <p>
+        El encapsulamiento es uno de los pilares fundamentales de la POO.
+        Consiste en proteger los datos de una clase evitando el acceso
+        directo desde otras clases. Para ello se utilizan modificadores
+        de acceso y métodos especiales llamados getters y setters.
+    </p>
+
+    <!-- DEFINICION -->
+    <div class="card">
+
+        <h3>¿Qué son los atributos?</h3>
+
+        <p>
+            Los atributos son variables que almacenan información de un objeto.
+            Por ejemplo, un objeto <strong>Persona</strong> puede tener:
+        </p>
+
+        <ul>
+            <li>nombre</li>
+            <li>edad</li>
+            <li>correo</li>
+        </ul>
+
+    </div>
+
+    <!-- METODOS -->
+    <div class="card">
+
+        <h3>¿Qué son los métodos?</h3>
+
+        <p>
+            Los métodos son funciones definidas dentro de una clase.
+            Permiten ejecutar acciones relacionadas con los objetos.
+        </p>
+
+        <p>Ejemplos:</p>
+
+        <ul>
+            <li>mostrarInformacion()</li>
+            <li>calcularEdad()</li>
+            <li>enviarMensaje()</li>
+        </ul>
+
+    </div>
+
+    <!-- MODIFICADORES -->
+    <div class="card">
+
+        <h3>Modificadores de Acceso</h3>
+
+        <p>
+            Los modificadores de acceso controlan desde dónde se puede
+            acceder a los atributos y métodos de una clase.
+        </p>
+
+        <ul>
+            <li><strong>public:</strong> accesible desde cualquier clase.</li>
+            <li><strong>private:</strong> solo accesible dentro de la misma clase.</li>
+            <li><strong>protected:</strong> accesible en la clase y sus subclases.</li>
+        </ul>
+
+    </div>
+
+    <!-- GETTERS Y SETTERS -->
+    <div class="card">
+
+        <h3>Getters y Setters</h3>
+
+        <p>
+            Los getters permiten obtener el valor de un atributo privado,
+            mientras que los setters permiten modificarlo de manera segura.
+        </p>
+
+    </div>
+
+    <!-- EJEMPLO -->
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
+
+        <pre><code>
+class Persona {
+
+    // Atributos privados
+    private String nombre;
+    private int edad;
+
+    // Setter
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Getter
+    public String getNombre() {
+        return nombre;
+    }
+
+    // Setter
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    // Getter
+    public int getEdad() {
+        return edad;
+    }
+
+    // Método
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+    }
+}
+</code></pre>
+
+    </div>
+
+    <!-- EXPLICACION -->
+    <div class="card">
+
+        <h3>Explicación del Ejemplo</h3>
+
+        <p>
+            En este ejemplo los atributos <strong>nombre</strong> y
+            <strong>edad</strong> son privados, por lo que no pueden
+            modificarse directamente desde otra clase.
+        </p>
+
+        <p>
+            Para acceder a ellos se utilizan los métodos
+            <strong>getNombre()</strong> y <strong>getEdad()</strong>.
+        </p>
+
+        <p>
+            Para modificar sus valores se usan los métodos
+            <strong>setNombre()</strong> y <strong>setEdad()</strong>.
+        </p>
+
+        <p>
+            Esto permite proteger la información y controlar cómo se
+            manipulan los datos dentro del programa.
+        </p>
+
+    </div>
+
+    <!-- IMPORTANCIA -->
+    <div class="card">
+
+        <h3>Importancia del Encapsulamiento</h3>
+
+        <ul>
+            <li>Protege los datos de modificaciones incorrectas.</li>
+            <li>Mejora la seguridad del programa.</li>
+            <li>Facilita el mantenimiento del código.</li>
+            <li>Permite controlar el acceso a la información.</li>
+            <li>Hace que las clases sean más organizadas y reutilizables.</li>
         </ul>
 
     </div>
