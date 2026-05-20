@@ -103,55 +103,159 @@ class Vehiculo {
 
 <section class="tema" id="tema2">
 
-    <h2>2. Composición y Modularización</h2>
+    <h2>2. Composición y Modularización del Código</h2>
 
     <p>
-        La composición representa relaciones entre objetos.
-        Permite construir sistemas más organizados y reutilizables.
+        La composición es un principio de la Programación Orientada a Objetos
+        donde una clase contiene objetos de otras clases para construir
+        funcionalidades más complejas.
     </p>
 
+    <p>
+        La modularización consiste en dividir un sistema en pequeñas partes
+        independientes llamadas módulos, facilitando la organización,
+        reutilización y mantenimiento del código.
+    </p>
+
+    <!-- DEFINICION -->
+
     <div class="card">
 
-        <h3>Ejemplo 1</h3>
+        <h3>Definición</h3>
+
+        <p>
+            En POO, la composición representa una relación del tipo
+            "tiene un". Por ejemplo, un automóvil tiene un motor.
+            Esto permite crear sistemas más organizados y reutilizables.
+        </p>
+
+    </div>
+
+    <!-- CARACTERISTICAS -->
+
+    <div class="card">
+
+        <h3>Características</h3>
+
+        <ul>
+
+            <li>Favorece la reutilización del código.</li>
+
+            <li>Permite construir sistemas complejos.</li>
+
+            <li>Mejora la organización del software.</li>
+
+            <li>Reduce la dependencia entre clases.</li>
+
+            <li>Facilita el mantenimiento del código.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJEMPLO RESUELTO -->
+
+    <div class="card">
+
+        <h3>Ejemplo Resuelto</h3>
 
         <pre>
 <code>
-class Computador {
+class Motor {
 
-    Procesador procesador;
+    void encender() {
+
+        System.out.println("Motor encendido");
+    }
+}
+
+class Auto {
+
+    private Motor motor;
+
+    public Auto() {
+
+        motor = new Motor();
+    }
+
+    void arrancar() {
+
+        motor.encender();
+
+        System.out.println("Auto en movimiento");
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Auto auto = new Auto();
+
+        auto.arrancar();
+    }
 }
 </code>
 </pre>
 
     </div>
 
+    <!-- EXPLICACION -->
+
     <div class="card">
 
-        <h3>Ejemplo 2</h3>
+        <h3>Explicación del Ejemplo</h3>
 
-        <pre>
-<code>
-class Casa {
+        <p>
+            La clase Auto utiliza un objeto de la clase Motor.
+            Esto demuestra composición porque el automóvil
+            "tiene un" motor.
+        </p>
 
-    Habitacion habitacion;
-}
-</code>
-</pre>
+        <p>
+            Gracias a este principio de POO, el sistema
+            queda más organizado y cada clase tiene
+            una responsabilidad específica.
+        </p>
 
     </div>
+
+    <!-- VENTAJAS -->
+
+    <div class="card">
+
+        <h3>Ventajas</h3>
+
+        <ul>
+
+            <li>Mayor reutilización de clases.</li>
+
+            <li>Mejor mantenimiento del sistema.</li>
+
+            <li>Mayor escalabilidad del software.</li>
+
+            <li>Separación clara de responsabilidades.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- EJERCICIOS -->
 
     <div class="ejercicios">
 
-        <h3>Ejercicios</h3>
+        <h3>Ejercicios Propuestos</h3>
 
         <ul>
 
             <li>
-                Crear una clase Auto con una clase Motor.
+                Crear una clase Computador que tenga
+                una clase Procesador utilizando composición.
             </li>
 
             <li>
-                Diseñar un sistema modular para biblioteca.
+                Diseñar un sistema de biblioteca usando
+                clases Libro, Usuario y Prestamo.
             </li>
 
         </ul>
