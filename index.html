@@ -5,23 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>POO en Java</title>
+    <title>POO Project</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <header class="header">
 
-    <div class="logo">
-        POO JAVA
-    </div>
+    <h2>POO PROJECT</h2>
 
     <nav class="navbar">
-
         <a href="#inicio">Inicio</a>
         <a href="#tema1">Tema 1</a>
         <a href="#tema2">Tema 2</a>
@@ -29,27 +24,18 @@
         <a href="#tema4">Tema 4</a>
         <a href="#tema5">Tema 5</a>
         <a href="#tema6">Tema 6</a>
-
     </nav>
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero" id="inicio">
 
-    <h1>
-        Programación Orientada a Objetos
-    </h1>
+    <h1>Programación Orientada a Objetos</h1>
 
     <p>
         Manual web académico sobre los temas fundamentales
         de POO en Java.
     </p>
-
-    <button>
-        Explorar Temas
-    </button>
 
 </section>
 
@@ -57,363 +43,65 @@
 
 <section class="tema" id="tema1">
 
-        <h2>1. Clases Abstractas e Interfaces</h2>
+    <h2>1. Clases Abstractas e Interfaces</h2>
 
-        <p>
-            Las clases abstractas e interfaces son pilares fundamentales
-            de la Programación Orientada a Objetos.
-            Permiten aplicar abstracción, reutilización de código
-            y polimorfismo.
-        </p>
+    <p>
+        Las clases abstractas y las interfaces son pilares fundamentales
+        de la Programación Orientada a Objetos porque permiten aplicar
+        abstracción y polimorfismo.
+    </p>
 
-        <!-- CONCEPTO -->
+    <div class="card">
 
-        <div class="info-box">
+        <h3>Ejemplo 1</h3>
 
-            <h3>Concepto</h3>
-
-            <p>
-                Una clase abstracta es una clase que no puede ser instanciada
-                directamente y sirve como base para otras clases.
-                Las interfaces definen contratos que las clases deben implementar.
-            </p>
-
-        </div>
-
-        <!-- CARACTERISTICAS -->
-
-        <div class="info-box">
-
-            <h3>Características</h3>
-
-            <ul>
-
-                <li>Permiten reutilización de código.</li>
-                <li>Aplican abstracción.</li>
-                <li>Facilitan el polimorfismo.</li>
-                <li>Organizan mejor el sistema.</li>
-
-            </ul>
-
-        </div>
-
-        <!-- EJEMPLOS -->
-
-        <div class="cards">
-
-            <!-- EJEMPLO 1 -->
-
-            <div class="card">
-
-                <h3>Ejemplo 1 - Clase Abstracta</h3>
-
-                <pre>
+        <pre><code>
 abstract class Animal {
 
-    protected String nombre;
-
-    public Animal(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public abstract void hacerSonido();
+    abstract void sonido();
 }
 
 class Perro extends Animal {
 
-    public Perro(String nombre) {
-        super(nombre);
-    }
-
-    @Override
-    public void hacerSonido() {
+    void sonido() {
         System.out.println("Guau");
     }
 }
-</pre>
+</code></pre>
 
-                <p>
-                    La clase Animal define un comportamiento general.
-                    La clase Perro hereda e implementa el método abstracto.
-                </p>
+    </div>
 
-            </div>
+    <div class="card">
 
-            <!-- EJEMPLO 2 -->
+        <h3>Ejemplo 2</h3>
 
-            <div class="card">
+        <pre><code>
+interface Vehiculo {
 
-                <h3>Ejemplo 2 - Interfaces</h3>
-
-                <pre>
-interface Pagable {
-
-    void pagar();
+    void acelerar();
 }
 
-class Factura implements Pagable {
+class Carro implements Vehiculo {
 
-    @Override
-    public void pagar() {
-        System.out.println("Pago realizado");
+    public void acelerar() {
+        System.out.println("Acelerando...");
     }
 }
-</pre>
-
-                <p>
-                    La interfaz define un contrato que debe ser implementado
-                    por cualquier clase relacionada con pagos.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- VENTAJAS -->
-
-        <div class="info-box">
-
-            <h3>Ventajas</h3>
-
-            <ul>
-
-                <li>Mayor reutilización.</li>
-                <li>Mejor mantenimiento.</li>
-                <li>Arquitectura más organizada.</li>
-                <li>Flexibilidad en el diseño.</li>
-
-            </ul>
-
-        </div>
-
-        <!-- EJERCICIOS -->
-
-        <div class="ejercicios">
-
-            <h3>Ejercicios Propuestos</h3>
-
-            <ul>
-
-                <li>
-                    Crear una clase abstracta llamada Vehiculo
-                    con un método abstracto acelerar().
-                </li>
-
-                <li>
-                    Crear una interfaz llamada Conectable
-                    para dispositivos electrónicos.
-                </li>
-
-            </ul>
-
-        </div>
-
-    </section>
-
-<!-- TEMA 2 -->
-
-<section class="tema" id="tema2">
-
-    <h2>2. Composición y Modularización</h2>
-
-    <p>
-        La composición representa relaciones entre objetos.
-        Permite construir sistemas más organizados y reutilizables.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>Ejemplo 1</h3>
-
-            <pre>
-class Computador{
-    Procesador procesador;
-}
-</pre>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Ejemplo 2</h3>
-
-            <pre>
-class Casa{
-    Habitacion habitacion;
-}
-</pre>
-
-        </div>
+</code></pre>
 
     </div>
 
 </section>
-
-<!-- TEMA 3 -->
-
-<section class="tema" id="tema3">
-
-    <h2>3. Manejo de Errores y Excepciones</h2>
-
-    <p>
-        Las excepciones permiten controlar errores durante
-        la ejecución del programa.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>Ejemplo 1</h3>
-
-            <pre>
-try{
-    int n = 10 / 0;
-}catch(Exception e){
-    System.out.println(e);
-}
-</pre>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Ejemplo 2</h3>
-
-            <pre>
-throw new Exception("Error");
-</pre>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- TEMA 4 -->
-
-<section class="tema" id="tema4">
-
-    <h2>4. Colecciones y Estructuras</h2>
-
-    <p>
-        Las colecciones permiten almacenar múltiples datos
-        de forma dinámica.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>ArrayList</h3>
-
-            <pre>
-ArrayList<String> nombres;
-</pre>
-
-        </div>
-
-        <div class="card">
-
-            <h3>HashMap</h3>
-
-            <pre>
-HashMap<Integer,String> agenda;
-</pre>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- TEMA 5 -->
-
-<section class="tema" id="tema5">
-
-    <h2>5. Lectura y Escritura de Archivos</h2>
-
-    <p>
-        Java permite guardar y recuperar objetos desde archivos.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>Guardar Objetos</h3>
-
-            <pre>
-ObjectOutputStream salida;
-</pre>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Leer Objetos</h3>
-
-            <pre>
-ObjectInputStream entrada;
-</pre>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- TEMA 6 -->
-
-<section class="tema" id="tema6">
-
-    <h2>6. Buenas Prácticas y Refactorización</h2>
-
-    <p>
-        La refactorización mejora la calidad del código
-        sin cambiar su funcionamiento.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>Mal Código</h3>
-
-            <pre>
-int a;
-</pre>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Buen Código</h3>
-
-            <pre>
-int edadUsuario;
-</pre>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
 
 <footer class="footer">
 
     <p>
-        Proyecto académico POO Java © 2026
+        Proyecto académico de Programación Orientada a Objetos
     </p>
 
 </footer>
 
-<script src="./js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
-
 </html>
